@@ -127,6 +127,9 @@ VtolAttitudeControl::VtolAttitudeControl() :
 	} else if (_params.vtol_type == 2) {
 		_standard = new Standard(this);
 		_vtol_type = _standard;
+	} else if (_params.vtol_type == 3) {
+                _kolibris = new Kolibris(this);
+                _vtol_type = _kolibris;
 	} else {
 		_task_should_exit = true;
 	}

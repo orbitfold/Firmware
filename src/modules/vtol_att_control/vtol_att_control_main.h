@@ -86,6 +86,7 @@
 #include "tiltrotor.h"
 #include "tailsitter.h"
 #include "standard.h"
+#include "kolibris.h"
 
 
 extern "C" __EXPORT int vtol_att_control_main(int argc, char *argv[]);
@@ -195,6 +196,7 @@ private:
 	Tiltrotor * _tiltrotor;	// tailsitter vtol type
 	Tailsitter * _tailsitter;	// tiltrotor vtol type
 	Standard * _standard;	// standard vtol type
+	Kolibris * _kolibris;
 
 //*****************Member functions***********************************************************************
 
