@@ -45,6 +45,7 @@ px4_add_module(
 		tailsitter.cpp
 		standard_params.c
 		standard.cpp
+		kolibris.cpp
 	DEPENDS
 		platforms__common
 	)
