@@ -9,13 +9,18 @@
 
 sh /etc/init.d/rc.mc_defaults
 
-set MIXER quad_x
+set MIXER vtol_quad_x
+set PWM_OUT 12345678
+
+param set VT_MOT_COUNT 4
+param set VT_IDLE_PWM_MC 1080
+param set VT_TYPE 3
 
 set HIL yes
 
 if [ $AUTOCNF == yes ]
 then
-	param set VT_TYPE 2
+	param set VT_TYPE 3
 	param set VT_MOT_COUNT 4
 	param set VT_TRANS_THR 0.75
 
@@ -38,7 +43,6 @@ then
 fi
 
 #set MIXER vtol_quad_x
-#set PWM_OUT 12345678
 
 #set MIXER_AUX vtol_AAERT
 #set PWM_AUX_RATE 50
@@ -47,8 +51,4 @@ fi
 #set PWM_AUX_MIN 1000
 #set PWM_AUX_MAX 2000
 
-set MAV_TYPE 22
-
-param set VT_MOT_COUNT 4
-param set VT_IDLE_PWM_MC 1080
-param set VT_TYPE 3
+#set MAV_TYPE 22
